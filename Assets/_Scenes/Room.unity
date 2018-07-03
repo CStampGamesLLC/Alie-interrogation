@@ -2082,6 +2082,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1193539990 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224780412103629402, guid: 861f0a5aa7d1046b393b2afb1b80f77e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1988093379}
 --- !u!1 &1216526637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2424,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1414811358}
+--- !u!1 &1418201544 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1445097334424496, guid: 861f0a5aa7d1046b393b2afb1b80f77e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1988093379}
+--- !u!114 &1418201545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418201544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4def3f40ae042d784c306cb2ae00b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultParent: {fileID: 0}
 --- !u!1 &1518120588 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: f841d8a027ccd1a49bf011fcfb527967, type: 3}
@@ -3145,7 +3167,18 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114335571634601998, guid: 861f0a5aa7d1046b393b2afb1b80f77e,
+        type: 2}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1193539990}
+    - target: {fileID: 114335571634601998, guid: 861f0a5aa7d1046b393b2afb1b80f77e,
+        type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 692876885}
+    m_RemovedComponents:
+    - {fileID: 114335571634601998, guid: 861f0a5aa7d1046b393b2afb1b80f77e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 861f0a5aa7d1046b393b2afb1b80f77e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1992818532

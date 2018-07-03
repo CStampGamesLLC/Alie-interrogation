@@ -76,7 +76,7 @@ public abstract class Item : MonoBehaviour {
 
 		audio.volume = (strength / 50);
 
-		Debug.Log ("Just hit: " + justHit);
+//		Debug.Log ("Just hit: " + justHit);
 
 		//hits a player
 		if (NPC != null) {
@@ -129,12 +129,12 @@ public abstract class Item : MonoBehaviour {
 
 		while (true) {
 
-			Debug.Log ("waiting");
+//			Debug.Log ("waiting");
 
 			yield return new WaitForSeconds (1f);
 
 			justHit = false;
-			Debug.Log ("can hit again");
+//			Debug.Log ("can hit again");
 
 		}
 

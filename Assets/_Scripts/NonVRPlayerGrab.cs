@@ -22,7 +22,9 @@ public class NonVRPlayerGrab : MonoBehaviour {
 				RaycastHit hit;
 				Ray ray = Camera.main.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
 
-				if (Physics.Raycast (ray, out hit, 100.0f)) {
+				if (Physics.Raycast (Camera.main.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0)), out hit, 100.0f)) {
+
+					Debug.Log (hit.transform.name);
 
 					//obj clicked on is an item
 					if (hit.transform.GetComponent<Item> ()) {
