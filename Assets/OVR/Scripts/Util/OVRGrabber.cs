@@ -330,10 +330,7 @@ public class OVRGrabber : MonoBehaviour
         {
 			Debug.Log ("move called from editor");
 
-			Vector3 offset = grabbedObject.GetComponent<Item>().GetOffset();
-
-			grabbedRigidbody.MovePosition (transform.position - offset);
-            grabbedRigidbody.MoveRotation(grabbableRotation);
+			grabbedObject.GetComponent <Item>().OrientGrabbedObj(grabbableRotation, transform.position);
 
         }
     }

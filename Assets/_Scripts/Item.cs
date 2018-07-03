@@ -25,7 +25,7 @@ public abstract class Item : MonoBehaviour {
 
 	[HideInInspector]
 	public bool hitting = false;
-	Vector3 hitDirection;
+	public Vector3 hitDirection;
 
 	public AudioClip[] soundEffects;
 
@@ -47,25 +47,7 @@ public abstract class Item : MonoBehaviour {
 
 	}
 
-	void Update(){
-
-		if (hitting) {
-
-			Vector3 clampedPos = transform.position;
-
-			if (hitDirection.x > 0) {
-				clampedPos.x = Mathf.Clamp (clampedPos.x, float.MinValue, clampedPos.x);
-			} else if (hitDirection.x < 0){
-				clampedPos.x = Mathf.Clamp (clampedPos.x, clampedPos.x, float.MaxValue);
-			}
-
-		}
-
-	}
-
 	void OnCollisionEnter(Collision col){
-
-		NoPassThrough (col.transform);
 
 		if (justHit)
 			return;
@@ -91,6 +73,8 @@ public abstract class Item : MonoBehaviour {
 
 		} else if (col.transform.tag == "Surface") { //hit something else
 
+			StopPassThrough (col.transform.position);
+
 			justHit = true;
 			StartCoroutine (JustHit ());
 
@@ -98,6 +82,12 @@ public abstract class Item : MonoBehaviour {
 			audio.Play ();
 
 		}
+
+	}
+
+	void OnCollisionStay(Collision col){
+
+		StopPassThrough (col.transform.position);
 
 	}
 
@@ -140,31 +130,58 @@ public abstract class Item : MonoBehaviour {
 
 	}
 
-	void NoPassThrough(Transform col){
+	private void StopPassThrough(Vector3 colPos){
 
 		hitting = true;
 
-		Vector3 heading = col.position - transform.position;
+		Vector3 heading = colPos - transform.position;
 
 		float distance = heading.magnitude;
-		hitDirection = heading / distance;
-
-//		Debug.Log (hitDirection);
+		hitDirection = heading / distance;;
 
 	}
 
-	public Vector3 GetOffset(){
+	private Vector3 ClampToCol(Vector3 newPos){
+
+		if (hitDirection.x > 0) {
+			newPos.x = Mathf.Clamp (newPos.x, float.MinValue, transform.position.x);
+		} else if (hitDirection.x < 0) {
+			newPos.x = Mathf.Clamp (newPos.x, transform.position.x, float.MaxValue);
+		}
+		if (hitDirection.y > 0) {
+			newPos.y = Mathf.Clamp (newPos.y, float.MinValue, transform.position.y);
+		} else if (hitDirection.y < 0) {
+			newPos.y = Mathf.Clamp (newPos.y, transform.position.y, float.MaxValue);
+		}
+		if (hitDirection.z > 0) {
+			newPos.z = Mathf.Clamp (newPos.z, float.MinValue, transform.position.z);
+		} else if (hitDirection.z < 0) {
+			newPos.z = Mathf.Clamp (newPos.z, transform.position.z, float.MaxValue);
+		}
+
+		return newPos;
+
+	}
+
+	public void OrientGrabbedObj(Quaternion handRot, Vector3 handPos){
 
 		Vector3 offset;
 		Transform snapToPoint = GetComponent<OVRGrabbable> ().snapToPoint;
 
 		if (snapToPoint == null) {
-			return Vector3.zero;
+			offset = Vector3.zero;
+		} else {
+			offset = snapToPoint.position - snapToPoint.parent.position;
 		}
 
-		offset = snapToPoint.position - snapToPoint.parent.position;
+		Vector3 newPos = handPos - offset;
 
-		return offset;
+		if (hitting) {
+			newPos = ClampToCol (newPos);
+		}
+
+		rb.MovePosition (newPos);
+		rb.MoveRotation (handRot);
 
 	}
 
