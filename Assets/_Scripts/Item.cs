@@ -115,6 +115,18 @@ public abstract class Item : MonoBehaviour {
 
 	}
 
+	public virtual void SpecialPickup(){
+
+		//if the item is supposed to do something special when grabbed
+
+	}
+
+	public virtual void SpecialDrop(){
+		
+		//if the item is supposed to do something special when grabbed
+		
+	}
+
 	IEnumerator JustHit(){
 
 		while (true) {

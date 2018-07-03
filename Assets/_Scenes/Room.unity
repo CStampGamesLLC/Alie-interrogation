@@ -840,9 +840,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114630229897112804, guid: d4d883414171d43bfa8263ec16c5a3b0,
+        type: 2}
+      propertyPath: specialGrabType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227104288703968, guid: d4d883414171d43bfa8263ec16c5a3b0,
+        type: 2}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 370579192}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4d883414171d43bfa8263ec16c5a3b0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &370579192 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010482306814, guid: 84c8b8609f9bb434eaf5248f17ff1293,
+    type: 2}
+  m_PrefabInternal: {fileID: 1282158534}
 --- !u!1 &374827834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2204,10 @@ Prefab:
     - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
+      propertyPath: StartWithControllers
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}

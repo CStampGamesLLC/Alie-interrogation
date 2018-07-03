@@ -30,6 +30,8 @@ public class OVRGrabbable : MonoBehaviour
 
 	public Transform snapToPoint;
 
+	[SerializeField]
+	private bool specialGrabType = false;
     [SerializeField]
     protected bool m_allowOffhandGrab = true;
     [SerializeField]
@@ -122,7 +124,13 @@ public class OVRGrabbable : MonoBehaviour
 	/// Notifies the object that it has been grabbed.
 	/// </summary>
 	virtual public void GrabBegin(OVRGrabber hand, Collider grabPoint)
+
     {
+
+		if (specialGrabType) {
+			GetComponent <Item>().SpecialPickup();
+		}
+
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -133,6 +141,10 @@ public class OVRGrabbable : MonoBehaviour
 	/// </summary>
 	virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
+		if (specialGrabType) {
+			GetComponent <Item>().SpecialDrop();
+		}
+
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = m_grabbedKinematic;
         rb.velocity = linearVelocity;
