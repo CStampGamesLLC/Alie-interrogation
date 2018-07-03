@@ -153,4 +153,19 @@ public abstract class Item : MonoBehaviour {
 
 	}
 
+	public Vector3 GetOffset(){
+
+		Vector3 offset;
+		Transform snapToPoint = GetComponent<OVRGrabbable> ().snapToPoint;
+
+		if (snapToPoint == null) {
+			return Vector3.zero;
+		}
+
+		offset = snapToPoint.position - snapToPoint.parent.position;
+
+		return offset;
+
+	}
+
 }

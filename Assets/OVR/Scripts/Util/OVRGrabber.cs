@@ -304,6 +304,7 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 		
+#region edited portion
     protected virtual void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
     {
 
@@ -328,17 +329,15 @@ public class OVRGrabber : MonoBehaviour
         else
         {
 			Debug.Log ("move called from editor");
-			Transform snapToPoint = grabbedObject.GetComponent<OVRGrabbable> ().snapToPoint;
 
-			if (snapToPoint != null) {
-				Vector3 offset = snapToPoint.position - snapToPoint.parent.position;
-				grabbedRigidbody.MovePosition ((transform.position - offset));
-			} else {
-				grabbedRigidbody.MovePosition (transform.position);
-			}
+			Vector3 offset = grabbedObject.GetComponent<Item>().GetOffset();
+
+			grabbedRigidbody.MovePosition (transform.position - offset);
             grabbedRigidbody.MoveRotation(grabbableRotation);
+
         }
     }
+#endregion
 
     protected void GrabEnd()
     {
