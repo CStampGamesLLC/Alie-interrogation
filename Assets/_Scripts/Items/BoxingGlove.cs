@@ -7,8 +7,9 @@ public class BoxingGlove : Item {
 	Animator anim;
 
 	[SerializeField]
-	GameObject rightHand;
-	GameObject rightHandRenderPart;
+	GameObject avatar;
+	[SerializeField]
+	GameObject defaultHand;
 
 	void Start(){
 		anim = GetComponent <Animator> ();
@@ -17,11 +18,10 @@ public class BoxingGlove : Item {
 	public override void SpecialPickup ()
 	{
 
-		transform.SetParent (rightHand.transform);
-		rightHandRenderPart = transform.parent.Find ("hand_right_renderPart_0").gameObject;
-		rightHandRenderPart.SetActive (false);
-
-		//Debug.Break ();
+		Destroy (GetComponent <Rigidbody> ());
+		transform.SetParent (avatar.transform);
+		defaultHand.SetActive (false);
+		transform.parent.GetComponent<OvrAvatar> ().HandRight = gameObject.AddComponent <OvrAvatarHand> ();
 
 	}
 

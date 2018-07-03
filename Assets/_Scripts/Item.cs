@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))][RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]//[RequireComponent(typeof(Rigidbody))]
 public abstract class Item : MonoBehaviour {
 
 	//The last item that was grabbed
@@ -87,7 +87,8 @@ public abstract class Item : MonoBehaviour {
 
 	void OnCollisionStay(Collision col){
 
-		StopPassThrough (col.transform.position);
+		if (col.transform.CompareTag("Surface"))
+			StopPassThrough (col.transform.position);
 
 	}
 

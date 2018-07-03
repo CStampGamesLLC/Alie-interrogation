@@ -15,23 +15,6 @@ public class SnapToChair : MonoBehaviour {
 		SnapToChairPos ();
 	}
 
-	void Update(){
-
-		if (Input.GetButtonDown ("Fire1")) {
-			print("Fire1");
-			SnapToChairPos ();
-		}
-		if (Input.GetButtonDown ("Fire2")) {
-			print("Fire2");
-			SnapToChairPos ();
-		}
-		if (Input.GetButtonDown ("Fire3")) {
-			Debug.Log("Fire3");
-			SnapToChairPos ();
-		}
-
-	}
-
 	void SnapToChairPos(){
 		
 		Vector3 newPos = chair.position;
