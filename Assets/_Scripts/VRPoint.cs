@@ -14,8 +14,15 @@ public class VRPoint : MonoBehaviour {
 		if (Physics.Raycast (new Ray (transform.position, transform.forward), out hit, 100f)){
 
 			text.text = hit.transform.name;
-			Debug.DrawRay (transform.position, transform.forward);
-		
+
+			if (hit.transform.GetComponent<Image>()){
+				Debug.Break();
+			}
+
+			if (hit.transform.name == "Play Button"){
+				LevelManager.GetInstance().LoadLevel ("Room");
+			}
+
 		}
 
 	}
