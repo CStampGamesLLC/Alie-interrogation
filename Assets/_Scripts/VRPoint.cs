@@ -20,7 +20,8 @@ public class VRPoint : MonoBehaviour {
 			}
 
 			if (hit.transform.name == "Play Button"){
-				LevelManager.GetInstance().LoadLevel ("Room");
+				if (Input.GetButton ("Fire1"))
+					LevelManager.GetInstance().LoadLevel ("Room");
 			}
 
 		}
