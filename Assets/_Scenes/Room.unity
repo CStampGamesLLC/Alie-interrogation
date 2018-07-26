@@ -660,6 +660,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114712809257136872, guid: d49192a52a5a640ef9abcf093a50d58d,
+        type: 2}
+      propertyPath: joyMod
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114712809257136872, guid: d49192a52a5a640ef9abcf093a50d58d,
+        type: 2}
+      propertyPath: fearMod
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114712809257136872, guid: d49192a52a5a640ef9abcf093a50d58d,
+        type: 2}
+      propertyPath: painMod
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d49192a52a5a640ef9abcf093a50d58d, type: 2}
   m_IsPrefabParent: 0
