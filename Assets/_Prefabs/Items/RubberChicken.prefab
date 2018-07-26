@@ -201,6 +201,8 @@ MonoBehaviour:
   laughterMod: 1.5
   fearMod: -0.5
   painMod: -0.1
+  hitting: 0
+  hitDirection: {x: 0, y: 0, z: 0}
   soundEffects:
   - {fileID: 8300000, guid: 368a753792d1c4d42b07fdb0854c9d1b, type: 3}
   - {fileID: 8300000, guid: 368a753792d1c4d42b07fdb0854c9d1b, type: 3}
@@ -216,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapToPoint: {fileID: 4869428292462452}
+  specialGrabType: 0
   m_allowOffhandGrab: 1
   m_snapPosition: 0
   m_snapOrientation: 0

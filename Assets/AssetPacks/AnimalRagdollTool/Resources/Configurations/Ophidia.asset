@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de928ee349a60946b978b0e36877861, type: 3}
+  m_Name: Ophidia
+  m_EditorClassIdentifier: 
+  properName: Ophidia
+  locked: 0
+  baseValues:
+    totalMass: 27
+    distributeMass: 1
+    lateralAngle: 135
+    bendAngle: 90
+    coordSystem: 0
+  categories:
+  - Body
+  - Front Spine
+  - Rear Spine
+  rigs:
+  - label: Pelvis
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 0
+    runsToInt: 0
+    category: 0
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Front Spine 1
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 10
+    runsToInt: 3
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Front Spine 2
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 4
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Front Spine 3
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 3
+    runsToInt: 5
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Head
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 4
+    runsToInt: 0
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Rear Spine 1
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 11
+    runsToInt: 7
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Rear Spine 2
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 6
+    runsToInt: 8
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Rear Spine 3
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 7
+    runsToInt: 9
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Tail
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 8
+    runsToInt: 0
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Front Spine
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 1
+    runsToInt: 2
+    category: 0
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Rear Spine
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 1
+    runsToInt: 6
+    category: 0
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}

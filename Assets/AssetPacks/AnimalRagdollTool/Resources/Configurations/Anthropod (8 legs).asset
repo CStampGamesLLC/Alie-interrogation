@@ -1,0 +1,732 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de928ee349a60946b978b0e36877861, type: 3}
+  m_Name: Anthropod (8 legs)
+  m_EditorClassIdentifier: 
+  properName: Anthropod (8 legs)
+  locked: 0
+  baseValues:
+    totalMass: 60
+    distributeMass: 1
+    lateralAngle: 135
+    bendAngle: 15
+    coordSystem: 0
+  categories:
+  - Body
+  - Front Legs
+  - Center Front Legs
+  - Center Back Legs
+  - Back Legs
+  - Antenae (optional)
+  rigs:
+  - label: Pelvis
+    colType: 4
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 0
+    runsToInt: 2
+    category: 0
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Thorax
+    colType: 4
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 1
+    runsToInt: 0
+    category: 0
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left F Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 1
+    connectsToInt: 2
+    runsToInt: 4
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left F Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 3
+    runsToInt: 5
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left F Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 4
+    runsToInt: 6
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left F Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 5
+    runsToInt: 0
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right F Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 1
+    connectsToInt: 2
+    runsToInt: 8
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right F Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 7
+    runsToInt: 9
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right F Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 8
+    runsToInt: 10
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right F Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 9
+    runsToInt: 0
+    category: 1
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CF Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 12
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CF Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 11
+    runsToInt: 13
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CF Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 12
+    runsToInt: 14
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CF Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 13
+    runsToInt: 0
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CF Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 16
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CF Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 15
+    runsToInt: 17
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CF Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 16
+    runsToInt: 18
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CF Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 17
+    runsToInt: 0
+    category: 2
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left B Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 20
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left B Elbow
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 19
+    runsToInt: 21
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left B Wrist
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 20
+    runsToInt: 22
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left B Fingers
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 21
+    runsToInt: 0
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Antenae Top
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 0
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 24
+    category: 5
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Antenae Middle
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 0
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 23
+    runsToInt: 25
+    category: 5
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Antenae Tip
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 0
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 24
+    runsToInt: 0
+    category: 5
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right B Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 28
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right B Elbow
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 27
+    runsToInt: 29
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right B Wrist
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 28
+    runsToInt: 30
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right B Fingers
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 29
+    runsToInt: 0
+    category: 4
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CB Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 31
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CB Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 30
+    runsToInt: 32
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CB Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 31
+    runsToInt: 33
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Left CB Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 32
+    runsToInt: 0
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CB Shoulder
+    colType: 2
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 2
+    runsToInt: 35
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CB Elbow
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 34
+    runsToInt: 36
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CB Wrist
+    colType: 2
+    bendType: 1
+    direction: 0
+    dirty: 0
+    required: 1
+    hasRB: 1
+    hasJoint: 1
+    reverseLateralAngle: 0
+    connectsToInt: 35
+    runsToInt: 37
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
+  - label: Right CB Fingers
+    colType: 0
+    bendType: 0
+    direction: 0
+    dirty: 1
+    required: 1
+    hasRB: 0
+    hasJoint: 0
+    reverseLateralAngle: 0
+    connectsToInt: 36
+    runsToInt: 0
+    category: 3
+    source: {fileID: 0}
+    connectedTo: {fileID: 0}
+    runsTo: {fileID: 0}
+    rb: {fileID: 0}
+    col: {fileID: 0}
+    joint: {fileID: 0}
+    ragdollRig: {fileID: 0}
