@@ -52,16 +52,18 @@ public abstract class Item : MonoBehaviour {
 		if (justHit)
 			return;
 
-		NPC = col.gameObject.GetComponent<NPCEmotions> ();
+		NPC = col.transform.root.GetComponent<NPCEmotions> ();
 
 		strength = Mathf.Abs(Mathf.Max (rb.velocity.x, rb.velocity.y));
 
 		audio.volume = (strength / 50);
 
-//		Debug.Log ("Just hit: " + justHit);
+		//Debug.Log ("Just hit: " + justHit);
 
 		//hits a player
 		if (NPC != null) {
+
+			Debug.Log ("Hit " + NPC.name + " with " + name); 
 
 			justHit = true;
 			StartCoroutine (JustHit ());
@@ -71,7 +73,7 @@ public abstract class Item : MonoBehaviour {
 
 			AffectNPC (NPC);
 
-		} else if (col.transform.tag == "Surface") { //hit something else
+		} else if (col.transform.tag == "Surface") { //hit surface
 
 			StopPassThrough (col.transform.position);
 
@@ -80,6 +82,10 @@ public abstract class Item : MonoBehaviour {
 
 			audio.clip = soundEffects [1];
 			audio.Play ();
+
+		} else { //hit something else
+
+		//	Debug.Log ("Hit " + col.transform.name + " with " + name);
 
 		}
 

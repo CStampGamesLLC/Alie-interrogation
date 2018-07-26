@@ -13,7 +13,8 @@ public class NPCEmotions : MonoBehaviour {
 	public const string LAUGHTER = "laughter";
 	public const string PAIN = "pain";
 
-	[SerializeField] Text joy, fear, laughter, pain;
+	[SerializeField]
+	Animator anim;
 
 	GameObject currentFace;
 
@@ -21,19 +22,12 @@ public class NPCEmotions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-//		ChangeFace (happy);
-
+		
 		emotions = new Dictionary<string, float> ();
 		emotions.Add ("joy", 10);
 		emotions.Add("fear", 10);
 		emotions.Add("laughter", 10);
 		emotions.Add("pain", 10);
-
-		joy.text = "Joy: " + emotions [JOY];
-		pain.text = "Pain: " + emotions [PAIN];
-		laughter.text = "Laughter: " + emotions [LAUGHTER];
-		fear.text = "Fear: " + emotions [FEAR];
 
 	}
 
@@ -55,6 +49,8 @@ public class NPCEmotions : MonoBehaviour {
 		//clamps the new value between 0 and 100;
 		emotions [key] = Mathf.Clamp (value, 0f, 100f);;
 
+		Debug.Log (key.ToLower () + " = " + value);
+
 		OnUpdateEmotions ();
 
 	}
@@ -63,67 +59,56 @@ public class NPCEmotions : MonoBehaviour {
 	//where visible changes to the npc are made
 	void OnUpdateEmotions(){
 
-		joy.text = "Joy: " + emotions [JOY];
-		pain.text = "Pain: " + emotions [PAIN];
-		laughter.text = "Laughter: " + emotions [LAUGHTER];
-		fear.text = "Fear: " + emotions [FEAR];
+		Debug.Log ("Updating emotions");
 
 		//happy
 		if (emotions [FEAR] < 50f && emotions [PAIN] < 50f) {
 			if (emotions [JOY] > 20f) {
-//				newFace = happy;
+				anim.SetFloat ("blend", .2f); //happy
 				if (emotions [JOY] > 50f) {
-//					newFace = pleased;
+					anim.SetFloat ("blend", .1f); //pleased
 					if (emotions [JOY] > 70f) {
-//						newFace = lovey;
+						anim.SetFloat ("blend", 0f); //in love
 					}
 				}
-//				ChangeFace (newFace);
 			} 
 		}
 
 		//scared
 		if ((emotions [JOY] / emotions [FEAR]) < 2 && emotions [FEAR] > emotions[PAIN]) { 
 			if (emotions [FEAR] > 10f) {
-//				newFace = cringe;
+				anim.SetFloat ("blend", .3f); //cringe
 				if (emotions [FEAR] > 30f) {
-//					newFace = worried;
+					anim.SetFloat ("blend", .4f); //worried
 					if (emotions [FEAR] > 50f) {
-//						newFace = scared;
+						anim.SetFloat ("blend", .5f); //scared
 						if (emotions [FEAR] > 70f) {
-//							newFace = doomed;
+							anim.SetFloat ("blend", .55f); //doomed
 						}
 					}
 				}
 			}
-//			ChangeFace (newFace);
 		}
 
 		//hurt
 		if ((emotions [JOY] / emotions [PAIN]) < 2 && emotions [PAIN] > emotions [FEAR]) { 
 			if (emotions [PAIN] > 10f) {
-//				newFace = sad;
+				anim.SetFloat ("blend", .5f); //sad
 				if (emotions [PAIN] > 20f) {
-//					newFace = gasp;
+					anim.SetFloat ("blend", .55f); //shocked
 					if (emotions [PAIN] > 40f) {
-//						newFace = offended;
+						anim.SetFloat ("blend", .6f); //hurt
 						if (emotions [PAIN] > 60f) {
-//							newFace = pissed;
+							anim.SetFloat ("blend", .7f); //tearing
 							if (emotions [PAIN] > 80f) {
-//								newFace = crying;
+								anim.SetFloat ("blend", 1f); //weaping
 							}
 						}
 					}
 				}
 			}
-//			ChangeFace (newFace);
 		}
-
-
+			
 	}
 		
-	void ChangeFace(){
-		
-
-	}
 }

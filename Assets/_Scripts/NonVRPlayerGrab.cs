@@ -53,13 +53,13 @@ public class NonVRPlayerGrab : MonoBehaviour {
 			
 		if (item != null) {
 
-			Debug.Log ("pos" + item.localPosition);
-			Debug.Log ("offset" + offset);
-			Debug.Log ("tether" + (item.localPosition - offset));
+//			Debug.Log ("pos" + item.localPosition);
+//			Debug.Log ("offset" + offset);
+//			Debug.Log ("tether" + (item.localPosition - offset));
 
 			if (!Item.lastGrabbed.hitting) {
 
-				Debug.Log ("Moving " + item);
+//				Debug.Log ("Moving " + item);
 				item.localPosition = offset;
 
 			}
